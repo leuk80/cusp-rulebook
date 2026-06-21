@@ -4,58 +4,163 @@
   "type": "hotel",
   "redeemableCurrency": "Bonvoy Points",
   "metrics": [
-    { "id": "nights", "name": "Elite Nights",     "unit": "Nights", "periodType": "calendarYear" },
-    { "id": "spend",  "name": "Qualifying Spend",  "unit": "EUR",    "periodType": "calendarYear" }
+    {
+      "id": "nights",
+      "name": "Elite Nights",
+      "unit": "Nights",
+      "periodType": "calendarYear"
+    },
+    {
+      "id": "spend",
+      "name": "Qualifying Spend",
+      "unit": "EUR",
+      "periodType": "calendarYear"
+    }
   ],
   "tiers": [
     {
-      "id": "silver", "name": "Silver Elite", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 10 } ]
-    },
-    {
-      "id": "gold", "name": "Gold Elite", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 25 } ]
-    },
-    {
-      "id": "platinum", "name": "Platinum Elite", "rank": 3, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 50 } ]
-    },
-    {
-      "id": "titanium", "name": "Titanium Elite", "rank": 4, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 75 } ]
-    },
-    {
-      "id": "ambassador", "name": "Ambassador Elite", "rank": 5, "mode": "allOf",
+      "id": "silver",
+      "name": "Silver Elite",
+      "rank": 1,
+      "mode": "anyOf",
       "thresholds": [
-        { "metricId": "nights", "value": 100 },
-        { "metricId": "spend",  "value": 23000 }
+        {
+          "metricId": "nights",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold Elite",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum Elite",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "id": "titanium",
+      "name": "Titanium Elite",
+      "rank": 4,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 75
+        }
+      ]
+    },
+    {
+      "id": "ambassador",
+      "name": "Ambassador Elite",
+      "rank": 5,
+      "mode": "allOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 100
+        },
+        {
+          "metricId": "spend",
+          "value": 23000
+        }
       ]
     }
   ],
   "lifetimeMetrics": [
-    { "id": "eliteYears", "name": "Elite Years", "unit": "Years", "periodType": "calendarYear" }
+    {
+      "id": "eliteYears",
+      "name": "Elite Years",
+      "unit": "Years",
+      "periodType": "calendarYear"
+    }
   ],
   "lifetimeTiers": [
     {
-      "id": "lt-silver", "name": "Lifetime Silver Elite", "rank": 1, "mode": "allOf",
+      "id": "lt-silver",
+      "name": "Lifetime Silver Elite",
+      "rank": 1,
+      "mode": "allOf",
       "thresholds": [
-        { "metricId": "nights",     "value": 250 },
-        { "metricId": "eliteYears", "value": 5 }
+        {
+          "metricId": "nights",
+          "value": 250
+        },
+        {
+          "metricId": "eliteYears",
+          "value": 5
+        }
       ]
     },
     {
-      "id": "lt-gold", "name": "Lifetime Gold Elite", "rank": 2, "mode": "allOf",
+      "id": "lt-gold",
+      "name": "Lifetime Gold Elite",
+      "rank": 2,
+      "mode": "allOf",
       "thresholds": [
-        { "metricId": "nights",     "value": 400 },
-        { "metricId": "eliteYears", "value": 7 }
+        {
+          "metricId": "nights",
+          "value": 400
+        },
+        {
+          "metricId": "eliteYears",
+          "value": 7
+        }
       ]
     },
     {
-      "id": "lt-platinum", "name": "Lifetime Platinum Elite", "rank": 3, "mode": "allOf",
+      "id": "lt-platinum",
+      "name": "Lifetime Platinum Elite",
+      "rank": 3,
+      "mode": "allOf",
       "thresholds": [
-        { "metricId": "nights",     "value": 600 },
-        { "metricId": "eliteYears", "value": 10 }
+        {
+          "metricId": "nights",
+          "value": 600
+        },
+        {
+          "metricId": "eliteYears",
+          "value": 10
+        }
       ]
     }
+  ],
+  "brands": [
+    "JW Marriott",
+    "Marriott",
+    "Courtyard",
+    "Sheraton",
+    "Westin",
+    "St. Regis",
+    "Ritz-Carlton",
+    "Le Méridien",
+    "Renaissance",
+    "Aloft",
+    "Four Points",
+    "AC Hotels",
+    "Moxy",
+    "Residence Inn",
+    "Fairfield",
+    "SpringHill Suites",
+    "Autograph",
+    "Delta Hotels",
+    "TownePlace",
+    "Element"
   ]
 }

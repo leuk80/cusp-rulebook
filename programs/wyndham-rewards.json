@@ -1,10 +1,86 @@
 {
-  "id": "wyndham-rewards", "name": "Wyndham Rewards", "type": "hotel", "redeemableCurrency": "Points",
-  "metrics": [ { "id": "nights", "name": "Nights", "unit": "Nights", "periodType": "calendarYear" } ],
+  "id": "wyndham-rewards",
+  "name": "Wyndham Rewards",
+  "type": "hotel",
+  "redeemableCurrency": "Points",
+  "metrics": [
+    {
+      "id": "nights",
+      "name": "Nights",
+      "unit": "Nights",
+      "periodType": "calendarYear"
+    }
+  ],
   "tiers": [
-    { "id": "blue",     "name": "Blue",     "rank": 0, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 0 } ] },
-    { "id": "gold",     "name": "Gold",     "rank": 1, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 5 } ] },
-    { "id": "platinum", "name": "Platinum", "rank": 2, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 15 } ] },
-    { "id": "diamond",  "name": "Diamond",  "rank": 3, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 40 } ] }
+    {
+      "id": "blue",
+      "name": "Blue",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 40
+        }
+      ]
+    }
+  ],
+  "brands": [
+    "Wyndham Grand",
+    "Wyndham Garden",
+    "Wyndham Alltra",
+    "Wyndham",
+    "Ramada",
+    "Days Inn",
+    "Super 8",
+    "Howard Johnson",
+    "Travelodge",
+    "La Quinta",
+    "Microtel",
+    "Baymont",
+    "Wingate",
+    "Hawthorn",
+    "AmericInn",
+    "Dolce",
+    "TRYP",
+    "Dazzler",
+    "Trademark",
+    "ECHO Suites"
   ]
 }

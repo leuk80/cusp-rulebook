@@ -4,17 +4,100 @@
   "type": "hotel",
   "redeemableCurrency": "Points",
   "metrics": [
-    { "id": "nights",     "name": "Qualifying Nights", "unit": "N",  "periodType": "calendarYear" },
-    { "id": "basepoints", "name": "Base Points",       "unit": "BP", "periodType": "calendarYear" }
+    {
+      "id": "nights",
+      "name": "Qualifying Nights",
+      "unit": "N",
+      "periodType": "calendarYear"
+    },
+    {
+      "id": "basepoints",
+      "name": "Base Points",
+      "unit": "BP",
+      "periodType": "calendarYear"
+    }
   ],
   "tiers": [
-    { "id": "member", "name": "Member", "rank": 0, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 0 } ] },
-    { "id": "discoverist", "name": "Discoverist", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 10 }, { "metricId": "basepoints", "value": 25000 } ] },
-    { "id": "explorist", "name": "Explorist", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 30 }, { "metricId": "basepoints", "value": 50000 } ] },
-    { "id": "globalist", "name": "Globalist", "rank": 3, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 60 }, { "metricId": "basepoints", "value": 100000 } ] }
+    {
+      "id": "member",
+      "name": "Member",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "discoverist",
+      "name": "Discoverist",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 10
+        },
+        {
+          "metricId": "basepoints",
+          "value": 25000
+        }
+      ]
+    },
+    {
+      "id": "explorist",
+      "name": "Explorist",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 30
+        },
+        {
+          "metricId": "basepoints",
+          "value": 50000
+        }
+      ]
+    },
+    {
+      "id": "globalist",
+      "name": "Globalist",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 60
+        },
+        {
+          "metricId": "basepoints",
+          "value": 100000
+        }
+      ]
+    }
+  ],
+  "brands": [
+    "Park Hyatt",
+    "Grand Hyatt",
+    "Andaz",
+    "Hyatt Regency",
+    "Hyatt Place",
+    "Hyatt House",
+    "Hyatt Centric",
+    "Thompson",
+    "Alila",
+    "Miraval",
+    "Caption",
+    "Hyatt Ziva",
+    "Hyatt Zilara",
+    "Destination by Hyatt",
+    "JdV",
+    "Secrets",
+    "Breathless",
+    "Zoëtry",
+    "Hyatt"
   ]
 }

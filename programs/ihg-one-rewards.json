@@ -4,29 +4,116 @@
   "type": "hotel",
   "redeemableCurrency": "Points",
   "metrics": [
-    { "id": "nights", "name": "Qualifying Nights", "unit": "Nights", "periodType": "calendarYear" },
-    { "id": "points", "name": "Qualifying Points", "unit": "Points", "periodType": "calendarYear" }
+    {
+      "id": "nights",
+      "name": "Qualifying Nights",
+      "unit": "Nights",
+      "periodType": "calendarYear"
+    },
+    {
+      "id": "points",
+      "name": "Qualifying Points",
+      "unit": "Points",
+      "periodType": "calendarYear"
+    }
   ],
   "tiers": [
     {
-      "id": "club", "name": "Club", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 0 } ]
+      "id": "club",
+      "name": "Club",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 0
+        }
+      ]
     },
     {
-      "id": "silver", "name": "Silver Elite", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 10 }, { "metricId": "points", "value": 20000 } ]
+      "id": "silver",
+      "name": "Silver Elite",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 10
+        },
+        {
+          "metricId": "points",
+          "value": 20000
+        }
+      ]
     },
     {
-      "id": "gold", "name": "Gold Elite", "rank": 3, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 20 }, { "metricId": "points", "value": 40000 } ]
+      "id": "gold",
+      "name": "Gold Elite",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 20
+        },
+        {
+          "metricId": "points",
+          "value": 40000
+        }
+      ]
     },
     {
-      "id": "platinum", "name": "Platinum Elite", "rank": 4, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 40 }, { "metricId": "points", "value": 60000 } ]
+      "id": "platinum",
+      "name": "Platinum Elite",
+      "rank": 4,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 40
+        },
+        {
+          "metricId": "points",
+          "value": 60000
+        }
+      ]
     },
     {
-      "id": "diamond", "name": "Diamond Elite", "rank": 5, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 70 }, { "metricId": "points", "value": 120000 } ]
+      "id": "diamond",
+      "name": "Diamond Elite",
+      "rank": 5,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 70
+        },
+        {
+          "metricId": "points",
+          "value": 120000
+        }
+      ]
     }
+  ],
+  "brands": [
+    "Six Senses",
+    "Regent",
+    "InterContinental",
+    "Vignette",
+    "Kimpton",
+    "Hotel Indigo",
+    "voco",
+    "Ruby",
+    "Hualuxe",
+    "Crowne Plaza",
+    "Iberostar",
+    "EVEN Hotels",
+    "Holiday Inn Express",
+    "Holiday Inn",
+    "Garner",
+    "avid",
+    "Atwell",
+    "Staybridge",
+    "Candlewood"
   ]
 }
