@@ -1,0 +1,18 @@
+{
+  "id": "krisflyer",
+  "name": "KrisFlyer",
+  "type": "airline",
+  "alliance": "star",
+  "redeemableCurrency": "KrisFlyer miles",
+  "metrics": [
+    { "id": "elitemiles", "name": "Elite miles", "unit": "Elite miles", "periodType": "membershipYear" }
+  ],
+  "tiers": [
+    { "id": "member", "name": "KrisFlyer", "rank": 0, "mode": "anyOf",
+      "thresholds": [ { "metricId": "elitemiles", "value": 0 } ] },
+    { "id": "elite-silver", "name": "KrisFlyer Elite Silver", "rank": 1, "mode": "anyOf", "allianceStatus": "silver",
+      "thresholds": [ { "metricId": "elitemiles", "value": 25000 } ] },
+    { "id": "elite-gold", "name": "KrisFlyer Elite Gold", "rank": 2, "mode": "anyOf", "allianceStatus": "gold",
+      "thresholds": [ { "metricId": "elitemiles", "value": 50000 } ] }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "programId": "krisflyer",
+  "flight": {
+    "pointsMetricId": "elitemiles",
+    "pointMatrix": {
+      "continental":      { "economy": 750,  "premiumEconomy": 1100, "business": 1875, "first": 2250 },
+      "intercontinental": { "economy": 5000, "premiumEconomy": 7500, "business": 9375, "first": 11250 }
+    }
+  }
+}
