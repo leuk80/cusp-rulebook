@@ -1,0 +1,12 @@
+{
+  "id": "slh-invited", "name": "SLH Club", "type": "hotel", "redeemableCurrency": "Reward Night vouchers",
+  "metrics": [
+    { "id": "nights", "name": "Qualifying Nights", "unit": "nights", "periodType": "membershipYear" },
+    { "id": "spend",  "name": "Qualifying Spend",  "unit": "USD",    "periodType": "membershipYear" }
+  ],
+  "tiers": [
+    { "id": "club01", "name": "Club 01", "rank": 0, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 0 } ] },
+    { "id": "club02", "name": "Club 02", "rank": 1, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 4 } ] },
+    { "id": "club03", "name": "Club 03", "rank": 2, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 13 }, { "metricId": "spend", "value": 6000 } ] }
+  ]
+}

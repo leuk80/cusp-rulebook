@@ -1,0 +1,14 @@
+{
+  "id": "gha-discovery", "name": "GHA Discovery", "type": "hotel", "redeemableCurrency": "Discovery Dollars",
+  "metrics": [
+    { "id": "nights", "name": "Eligible Nights", "unit": "nights", "periodType": "calendarYear" },
+    { "id": "stays",  "name": "Eligible Stays",  "unit": "stays",  "periodType": "calendarYear" },
+    { "id": "spend",  "name": "Net Eligible Spend", "unit": "USD", "periodType": "calendarYear" }
+  ],
+  "tiers": [
+    { "id": "silver",   "name": "Silver",   "rank": 0, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 0 } ] },
+    { "id": "gold",     "name": "Gold",     "rank": 1, "mode": "anyOf", "thresholds": [ { "metricId": "stays", "value": 2 }, { "metricId": "spend", "value": 1000 } ] },
+    { "id": "platinum", "name": "Platinum", "rank": 2, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 10 }, { "metricId": "spend", "value": 5000 } ] },
+    { "id": "titanium", "name": "Titanium", "rank": 3, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 30 }, { "metricId": "spend", "value": 15000 } ] }
+  ]
+}
