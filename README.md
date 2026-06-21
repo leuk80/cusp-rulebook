@@ -26,6 +26,7 @@ docs/          field-reference.md — every field explained, with the quirks
 | `<id>.milestones.json`   | Milestone rewards   | `milestones.schema.json`    |
 | `*.links.json`           | Cross-program links | `links.schema.json`         |
 | `vat-rates.json`         | Lodging VAT table   | `vat-rates.schema.json`     |
+| `service-rates.json`     | Lodging service-charge ("++") table | `service-rates.schema.json` |
 
 `<id>` is a stable kebab-case identifier (e.g. `miles-and-more`, `accor-all`).
 
