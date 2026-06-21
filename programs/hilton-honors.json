@@ -4,44 +4,160 @@
   "type": "hotel",
   "redeemableCurrency": "Points",
   "metrics": [
-    { "id": "nights", "name": "Nights",        "unit": "Nights", "periodType": "calendarYear" },
-    { "id": "stays",  "name": "Stays",         "unit": "Stays",  "periodType": "calendarYear" },
-    { "id": "spend",  "name": "Eligible Spend", "unit": "$",     "periodType": "calendarYear" }
+    {
+      "id": "nights",
+      "name": "Nights",
+      "unit": "Nights",
+      "periodType": "calendarYear"
+    },
+    {
+      "id": "stays",
+      "name": "Stays",
+      "unit": "Stays",
+      "periodType": "calendarYear"
+    },
+    {
+      "id": "spend",
+      "name": "Eligible Spend",
+      "unit": "$",
+      "periodType": "calendarYear"
+    }
   ],
   "tiers": [
     {
-      "id": "member", "name": "Member", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "nights", "value": 0 } ]
-    },
-    {
-      "id": "silver", "name": "Silver", "rank": 2, "mode": "anyOf",
+      "id": "member",
+      "name": "Member",
+      "rank": 1,
+      "mode": "anyOf",
       "thresholds": [
-        { "metricId": "nights", "value": 10 },
-        { "metricId": "stays",  "value": 4 },
-        { "metricId": "spend",  "value": 2500 }
+        {
+          "metricId": "nights",
+          "value": 0
+        }
       ]
     },
     {
-      "id": "gold", "name": "Gold", "rank": 3, "mode": "anyOf",
+      "id": "silver",
+      "name": "Silver",
+      "rank": 2,
+      "mode": "anyOf",
       "thresholds": [
-        { "metricId": "nights", "value": 25 },
-        { "metricId": "stays",  "value": 15 },
-        { "metricId": "spend",  "value": 6000 }
+        {
+          "metricId": "nights",
+          "value": 10
+        },
+        {
+          "metricId": "stays",
+          "value": 4
+        },
+        {
+          "metricId": "spend",
+          "value": 2500
+        }
       ]
     },
     {
-      "id": "diamond", "name": "Diamond", "rank": 4, "mode": "anyOf",
+      "id": "gold",
+      "name": "Gold",
+      "rank": 3,
+      "mode": "anyOf",
       "thresholds": [
-        { "metricId": "nights", "value": 50 },
-        { "metricId": "stays",  "value": 25 },
-        { "metricId": "spend",  "value": 11500 }
+        {
+          "metricId": "nights",
+          "value": 25
+        },
+        {
+          "metricId": "stays",
+          "value": 15
+        },
+        {
+          "metricId": "spend",
+          "value": 6000
+        }
       ]
     },
     {
-      "id": "diamondReserve", "name": "Diamond Reserve", "rank": 5,
+      "id": "diamond",
+      "name": "Diamond",
+      "rank": 4,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 50
+        },
+        {
+          "metricId": "stays",
+          "value": 25
+        },
+        {
+          "metricId": "spend",
+          "value": 11500
+        }
+      ]
+    },
+    {
+      "id": "diamondReserve",
+      "name": "Diamond Reserve",
+      "rank": 5,
       "groups": [
-        { "anyOf": [ { "metricId": "nights", "value": 80 }, { "metricId": "stays", "value": 40 } ] },
-        { "anyOf": [ { "metricId": "spend", "value": 18000 } ] }
+        {
+          "anyOf": [
+            {
+              "metricId": "nights",
+              "value": 80
+            },
+            {
+              "metricId": "stays",
+              "value": 40
+            }
+          ]
+        },
+        {
+          "anyOf": [
+            {
+              "metricId": "spend",
+              "value": 18000
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lifetimeMetrics": [
+    {
+      "id": "eliteYears",
+      "name": "Diamond Years",
+      "unit": "Years",
+      "periodType": "calendarYear"
+    }
+  ],
+  "lifetimeTiers": [
+    {
+      "id": "lt-diamond",
+      "name": "Lifetime Diamond",
+      "rank": 1,
+      "groups": [
+        {
+          "anyOf": [
+            {
+              "metricId": "eliteYears",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "anyOf": [
+            {
+              "metricId": "nights",
+              "value": 1000
+            },
+            {
+              "metricId": "spend",
+              "value": 200000
+            }
+          ]
+        }
       ]
     }
   ]
