@@ -5,14 +5,52 @@
   "alliance": "skyteam",
   "redeemableCurrency": "Virgin Points",
   "metrics": [
-    { "id": "tierpoints", "name": "Tier Points", "unit": "TP", "periodType": "membershipYear" }
+    {
+      "id": "tierpoints",
+      "name": "Tier Points",
+      "unit": "TP",
+      "periodType": "membershipYear"
+    }
   ],
   "tiers": [
-    { "id": "red", "name": "Red", "rank": 0, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tierpoints", "value": 0 } ] },
-    { "id": "silver", "name": "Silver", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tierpoints", "value": 400 } ] },
-    { "id": "gold", "name": "Gold", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tierpoints", "value": 1000 } ] }
+    {
+      "id": "red",
+      "name": "Red",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tierpoints",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tierpoints",
+          "value": 400
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tierpoints",
+          "value": 1000
+        }
+      ]
+    }
+  ],
+  "carriers": [
+    "VS"
   ]
 }

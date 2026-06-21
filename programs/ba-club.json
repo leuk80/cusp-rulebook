@@ -5,16 +5,64 @@
   "alliance": "oneworld",
   "redeemableCurrency": "Avios",
   "metrics": [
-    { "id": "tierpoints", "name": "Tier Points", "unit": "TP", "periodType": "calendarYear" }
+    {
+      "id": "tierpoints",
+      "name": "Tier Points",
+      "unit": "TP",
+      "periodType": "calendarYear"
+    }
   ],
   "tiers": [
-    { "id": "blue", "name": "Blue", "rank": 0, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tierpoints", "value": 0 } ] },
-    { "id": "bronze", "name": "Bronze", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tierpoints", "value": 3500 } ] },
-    { "id": "silver", "name": "Silver", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tierpoints", "value": 7500 } ] },
-    { "id": "gold", "name": "Gold", "rank": 3, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tierpoints", "value": 65000 } ] }
+    {
+      "id": "blue",
+      "name": "Blue",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tierpoints",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "bronze",
+      "name": "Bronze",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tierpoints",
+          "value": 3500
+        }
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tierpoints",
+          "value": 7500
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tierpoints",
+          "value": 65000
+        }
+      ]
+    }
+  ],
+  "carriers": [
+    "BA"
   ]
 }
