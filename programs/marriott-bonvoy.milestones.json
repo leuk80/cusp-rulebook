@@ -1,0 +1,32 @@
+{
+  "programId": "marriott-bonvoy",
+  "milestones": [
+    {
+      "id": "choice-50",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [50] },
+      "choose": true,
+      "options": [
+        { "id": "nua-5", "labelKey": "reward.nightlyUpgradeAwards", "grantsKind": "suiteNightUpgrade", "grantsQuantity": 5 },
+        { "id": "enc-5", "labelKey": "reward.eliteNightCredits", "grantsKind": "other", "grantsQuantity": 5 },
+        { "id": "gift-silver", "labelKey": "reward.giftSilverStatus", "giftable": true, "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "bed-discount", "labelKey": "reward.bedDiscount", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "charity", "labelKey": "reward.charityDonation", "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "choice-75",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [75] },
+      "choose": true,
+      "options": [
+        { "id": "nua-5", "labelKey": "reward.nightlyUpgradeAwards", "grantsKind": "suiteNightUpgrade", "grantsQuantity": 5 },
+        { "id": "enc-5", "labelKey": "reward.eliteNightCredits", "grantsKind": "other", "grantsQuantity": 5 },
+        { "id": "free-night-40k", "labelKey": "reward.freeNight", "grantsKind": "freeNightCertificate", "grantsQuantity": 1 },
+        { "id": "gift-gold", "labelKey": "reward.giftGoldStatus", "giftable": true, "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "bed-discount", "labelKey": "reward.bedDiscount", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "charity", "labelKey": "reward.charityDonation", "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    }
+  ]
+}

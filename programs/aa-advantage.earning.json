@@ -1,0 +1,9 @@
+{
+  "programId": "aa-advantage",
+  "purchase": {
+    "pointsMetricId": "loyaltypoints",
+    "pointsPerEuro": 1.0,
+    "convertToEUR": false,
+    "roundPointsDown": true
+  }
+}

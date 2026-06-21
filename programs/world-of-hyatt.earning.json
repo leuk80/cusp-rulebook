@@ -1,0 +1,9 @@
+{
+  "programId": "world-of-hyatt",
+  "hotel": {
+    "pointsMetricId": "basepoints",
+    "nightsMetricId": "nights",
+    "pointsPerEuro": 5,
+    "roundPointsDown": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "programId": "accor-all",
+  "milestones": [
+    {
+      "id": "snu-base",
+      "metricId": "sp",
+      "trigger": { "type": "thresholds", "values": [14000] },
+      "choose": false,
+      "options": [
+        { "id": "snu", "labelKey": "reward.suiteNightUpgrade", "grantsKind": "suiteNightUpgrade", "grantsQuantity": 2 }
+      ]
+    },
+    {
+      "id": "snu-interval",
+      "metricId": "sp",
+      "trigger": { "type": "interval", "start": 18000, "step": 4000, "end": 54000 },
+      "choose": false,
+      "options": [
+        { "id": "snu", "labelKey": "reward.suiteNightUpgrade", "grantsKind": "suiteNightUpgrade", "grantsQuantity": 1 }
+      ]
+    }
+  ]
+}

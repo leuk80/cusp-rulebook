@@ -1,0 +1,20 @@
+{
+  "id": "qatar-privilege-club",
+  "name": "Qatar Privilege Club",
+  "type": "airline",
+  "alliance": "oneworld",
+  "redeemableCurrency": "Avios",
+  "metrics": [
+    { "id": "qpoints", "name": "Qpoints", "unit": "Qpoints", "periodType": "rolling12" }
+  ],
+  "tiers": [
+    { "id": "burgundy", "name": "Burgundy", "rank": 0, "mode": "anyOf",
+      "thresholds": [ { "metricId": "qpoints", "value": 0 } ] },
+    { "id": "silver", "name": "Silver", "rank": 1, "mode": "anyOf", "allianceStatus": "ruby",
+      "thresholds": [ { "metricId": "qpoints", "value": 150 } ] },
+    { "id": "gold", "name": "Gold", "rank": 2, "mode": "anyOf", "allianceStatus": "sapphire",
+      "thresholds": [ { "metricId": "qpoints", "value": 300 } ] },
+    { "id": "platinum", "name": "Platinum", "rank": 3, "mode": "anyOf", "allianceStatus": "emerald",
+      "thresholds": [ { "metricId": "qpoints", "value": 600 } ] }
+  ]
+}

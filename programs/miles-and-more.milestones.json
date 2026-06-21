@@ -1,0 +1,67 @@
+{
+  "programId": "miles-and-more",
+  "milestones": [
+    {
+      "id": "ft-eb-700", "metricId": "qp", "requiredTierId": "ft",
+      "trigger": { "type": "thresholds", "values": [700] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "evoucher", "labelKey": "reward.eVoucher", "grantsKind": "upgradeVoucher", "grantsQuantity": 1 } ]
+    },
+    {
+      "id": "ft-eb-800", "metricId": "qp", "requiredTierId": "ft",
+      "trigger": { "type": "thresholds", "values": [800] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "convert", "labelKey": "reward.convertMiles" } ]
+    },
+
+    {
+      "id": "sen-eb-2200", "metricId": "qp", "requiredTierId": "sen",
+      "trigger": { "type": "thresholds", "values": [2200] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "worldshop", "labelKey": "reward.worldshopVoucher", "grantsKind": "other", "grantsQuantity": 1 } ]
+    },
+    {
+      "id": "sen-eb-2500", "metricId": "qp", "requiredTierId": "sen",
+      "trigger": { "type": "thresholds", "values": [2500] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "evoucher2", "labelKey": "reward.eVoucher", "grantsKind": "upgradeVoucher", "grantsQuantity": 2 } ]
+    },
+    {
+      "id": "sen-eb-3500", "metricId": "qp", "requiredTierId": "sen",
+      "trigger": { "type": "thresholds", "values": [3500] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "ftcard", "labelKey": "reward.partnerCard", "giftable": true, "grantsKind": "other", "grantsQuantity": 1 } ]
+    },
+    {
+      "id": "sen-eb-4500", "metricId": "qp", "requiredTierId": "sen",
+      "trigger": { "type": "thresholds", "values": [4500] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "miles15k", "labelKey": "reward.milesCredit" } ]
+    },
+    {
+      "id": "sen-eb-5500", "metricId": "qp", "requiredTierId": "sen",
+      "trigger": { "type": "thresholds", "values": [5500] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "lounge", "labelKey": "reward.firstClassLounge", "grantsKind": "loungePass", "grantsQuantity": 1 } ]
+    },
+
+    {
+      "id": "hon-eb-7000", "metricId": "honp", "requiredTierId": "hon",
+      "trigger": { "type": "thresholds", "values": [7000] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "evoucher2h", "labelKey": "reward.eVoucher", "grantsKind": "upgradeVoucher", "grantsQuantity": 2 } ]
+    },
+    {
+      "id": "hon-eb-8500", "metricId": "honp", "requiredTierId": "hon",
+      "trigger": { "type": "thresholds", "values": [8500] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "miles30k", "labelKey": "reward.milesCredit" } ]
+    },
+    {
+      "id": "hon-eb-10000", "metricId": "honp", "requiredTierId": "hon",
+      "trigger": { "type": "thresholds", "values": [10000] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "evoucher2h2", "labelKey": "reward.eVoucher", "grantsKind": "upgradeVoucher", "grantsQuantity": 2 } ]
+    },
+    {
+      "id": "hon-eb-11500", "metricId": "honp", "requiredTierId": "hon",
+      "trigger": { "type": "thresholds", "values": [11500] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "ftcardh", "labelKey": "reward.partnerCard", "giftable": true, "grantsKind": "other", "grantsQuantity": 1 } ]
+    },
+    {
+      "id": "hon-eb-13000", "metricId": "honp", "requiredTierId": "hon",
+      "trigger": { "type": "thresholds", "values": [13000] }, "eligibleSources": ["flight"], "choose": false,
+      "options": [ { "id": "sencard", "labelKey": "reward.senatorPartnerCard", "giftable": true, "grantsKind": "other", "grantsQuantity": 1 } ]
+    }
+  ]
+}

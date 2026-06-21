@@ -1,0 +1,9 @@
+{
+  "programId": "united-mileageplus",
+  "purchase": {
+    "pointsMetricId": "pqp",
+    "pointsPerEuro": 1.0,
+    "convertToEUR": false,
+    "roundPointsDown": true
+  }
+}

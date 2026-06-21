@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/cusp/cusp-rulebook/schema/earning.schema.json",
+  "title": "Earning Rule",
+  "description": "Turns a booking into metric contributions for one program. Mirrors `EarningRule` in QualificationEngine/EarningRule.swift. File convention: `<id>.earning.json`.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["programId"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "programId": { "type": "string", "minLength": 1 },
+    "flight": { "$ref": "#/$defs/flight" },
+    "hotel": { "$ref": "#/$defs/hotel" },
+    "purchase": { "$ref": "#/$defs/purchase" }
+  },
+  "$defs": {
+    "cabin": { "enum": ["economy", "premiumEconomy", "business", "first"] },
+    "flight": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pointsMetricId", "pointMatrix"],
+      "properties": {
+        "pointsMetricId": { "type": "string", "minLength": 1, "description": "Primary per-segment metric, always credited." },
+        "qpMetricId": { "type": "string", "minLength": 1, "description": "Qualifying-points metric, gated by qpIntegratedAirlines." },
+        "honMetricId": { "type": "string", "minLength": 1, "description": "HON Circle points metric, gated by honCabins." },
+        "pointMatrix": {
+          "type": "object",
+          "description": "pointMatrix[haul][cabin] = base value per segment.",
+          "minProperties": 1,
+          "propertyNames": { "enum": ["continental", "intercontinental"] },
+          "additionalProperties": {
+            "type": "object",
+            "minProperties": 1,
+            "propertyNames": { "$ref": "#/$defs/cabin" },
+            "additionalProperties": { "type": "number" }
+          }
+        },
+        "qpIntegratedAirlines": {
+          "type": "array",
+          "description": "Operating airlines (IATA) that earn qualifying/HON points.",
+          "items": { "type": "string" }
+        },
+        "honCabins": {
+          "type": "array",
+          "description": "Cabins that earn HON Circle points.",
+          "items": { "$ref": "#/$defs/cabin" }
+        }
+      }
+    },
+    "hotel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pointsMetricId": { "type": "string", "minLength": 1, "description": "Status-points metric, if the program awards them." },
+        "nightsMetricId": { "type": "string", "minLength": 1, "description": "Nights metric, if the program counts nights." },
+        "staysMetricId": { "type": "string", "minLength": 1, "description": "Stays metric (1 per stay regardless of nights)." },
+        "pointsPerEuro": { "type": "number", "minimum": 0, "description": "Points per eligible euro (only with pointsMetricId)." },
+        "roundPointsDown": { "type": "boolean", "description": "Floor vs nearest for points. Defaults to true." }
+      }
+    },
+    "purchase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pointsMetricId", "pointsPerEuro"],
+      "properties": {
+        "pointsMetricId": { "type": "string", "minLength": 1 },
+        "pointsPerEuro": { "type": "number", "minimum": 0, "description": "Points per spend unit (EUR unless convertToEUR is false)." },
+        "roundPointsDown": { "type": "boolean", "description": "Floor vs nearest for points. Defaults to true." },
+        "convertToEUR": { "type": "boolean", "description": "Convert amount to EUR first (default true). Set false for currency-denominated points like BA Tier Points." }
+      }
+    }
+  }
+}

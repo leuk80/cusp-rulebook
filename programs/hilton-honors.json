@@ -1,0 +1,48 @@
+{
+  "id": "hilton-honors",
+  "name": "Hilton Honors",
+  "type": "hotel",
+  "redeemableCurrency": "Points",
+  "metrics": [
+    { "id": "nights", "name": "Nights",        "unit": "Nights", "periodType": "calendarYear" },
+    { "id": "stays",  "name": "Stays",         "unit": "Stays",  "periodType": "calendarYear" },
+    { "id": "spend",  "name": "Eligible Spend", "unit": "$",     "periodType": "calendarYear" }
+  ],
+  "tiers": [
+    {
+      "id": "member", "name": "Member", "rank": 1, "mode": "anyOf",
+      "thresholds": [ { "metricId": "nights", "value": 0 } ]
+    },
+    {
+      "id": "silver", "name": "Silver", "rank": 2, "mode": "anyOf",
+      "thresholds": [
+        { "metricId": "nights", "value": 10 },
+        { "metricId": "stays",  "value": 4 },
+        { "metricId": "spend",  "value": 2500 }
+      ]
+    },
+    {
+      "id": "gold", "name": "Gold", "rank": 3, "mode": "anyOf",
+      "thresholds": [
+        { "metricId": "nights", "value": 25 },
+        { "metricId": "stays",  "value": 15 },
+        { "metricId": "spend",  "value": 6000 }
+      ]
+    },
+    {
+      "id": "diamond", "name": "Diamond", "rank": 4, "mode": "anyOf",
+      "thresholds": [
+        { "metricId": "nights", "value": 50 },
+        { "metricId": "stays",  "value": 25 },
+        { "metricId": "spend",  "value": 11500 }
+      ]
+    },
+    {
+      "id": "diamondReserve", "name": "Diamond Reserve", "rank": 5,
+      "groups": [
+        { "anyOf": [ { "metricId": "nights", "value": 80 }, { "metricId": "stays", "value": 40 } ] },
+        { "anyOf": [ { "metricId": "spend", "value": 18000 } ] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "programId": "db-bahnbonus",
+  "purchase": {
+    "pointsMetricId": "statuspoints",
+    "pointsPerEuro": 1.0,
+    "roundPointsDown": true
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "united-mileageplus",
+  "name": "United MileagePlus",
+  "type": "airline",
+  "alliance": "star",
+  "redeemableCurrency": "miles",
+  "metrics": [
+    { "id": "pqp", "name": "Premier Qualifying Points", "unit": "PQP", "periodType": "calendarYear" },
+    { "id": "pqf", "name": "Premier Qualifying Flights", "unit": "PQF", "periodType": "calendarYear" }
+  ],
+  "tiers": [
+    {
+      "id": "member", "name": "MileagePlus", "rank": 0, "mode": "anyOf",
+      "allianceStatus": "none",
+      "thresholds": [ { "metricId": "pqp", "value": 0 } ]
+    },
+    {
+      "id": "silver", "name": "Premier Silver", "rank": 1,
+      "allianceStatus": "silver",
+      "groups": [
+        { "anyOf": [ { "metricId": "pqp", "value": 6000 }, { "metricId": "pqf", "value": 15 } ] },
+        { "anyOf": [ { "metricId": "pqp", "value": 5000 } ] }
+      ]
+    },
+    {
+      "id": "gold", "name": "Premier Gold", "rank": 2,
+      "allianceStatus": "gold",
+      "groups": [
+        { "anyOf": [ { "metricId": "pqp", "value": 12000 }, { "metricId": "pqf", "value": 30 } ] },
+        { "anyOf": [ { "metricId": "pqp", "value": 10000 } ] }
+      ]
+    },
+    {
+      "id": "platinum", "name": "Premier Platinum", "rank": 3,
+      "allianceStatus": "gold",
+      "groups": [
+        { "anyOf": [ { "metricId": "pqp", "value": 18000 }, { "metricId": "pqf", "value": 45 } ] },
+        { "anyOf": [ { "metricId": "pqp", "value": 15000 } ] }
+      ]
+    },
+    {
+      "id": "premier1k", "name": "Premier 1K", "rank": 4,
+      "allianceStatus": "gold",
+      "groups": [
+        { "anyOf": [ { "metricId": "pqp", "value": 28000 }, { "metricId": "pqf", "value": 60 } ] },
+        { "anyOf": [ { "metricId": "pqp", "value": 22000 } ] }
+      ]
+    }
+  ]
+}

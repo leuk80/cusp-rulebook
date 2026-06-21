@@ -1,0 +1,9 @@
+{
+  "programId": "delta-skymiles",
+  "purchase": {
+    "pointsMetricId": "mqd",
+    "pointsPerEuro": 1.0,
+    "convertToEUR": false,
+    "roundPointsDown": true
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "marriott-to-mm-points",
+    "fromProgramId": "marriott-bonvoy",
+    "toProgramId": "miles-and-more",
+    "type": "pointConversion",
+    "toMetricId": "points",
+    "source": "partner",
+    "pointsPerStay": 40,
+    "minNights": 1,
+    "requiresPaidStay": true
+  },
+  {
+    "id": "mm-status-to-marriott-gold",
+    "fromProgramId": "miles-and-more",
+    "toProgramId": "marriott-bonvoy",
+    "type": "statusBenefit",
+    "toMetricId": "",
+    "source": "statusMatch",
+    "requiresTierIds": ["sen", "hon"],
+    "grantsTierId": "gold"
+  }
+]

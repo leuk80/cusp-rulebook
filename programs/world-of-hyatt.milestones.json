@@ -1,0 +1,146 @@
+{
+  "programId": "world-of-hyatt",
+  "milestones": [
+    {
+      "id": "choice-20-30",
+      "metricId": "nights",
+      "trigger": { "type": "interval", "start": 20, "step": 10, "end": 30 },
+      "choose": true,
+      "options": [
+        { "id": "club-access", "labelKey": "reward.clubAccessAwards", "giftable": true, "grantsKind": "other", "grantsQuantity": 2 },
+        { "id": "next-stay-2k", "labelKey": "reward.nextStayAward", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "find-credit", "labelKey": "reward.findCredit", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "airline-partner", "labelKey": "reward.partnerAirlineBenefit", "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "free-night-30",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [30] },
+      "choose": false,
+      "options": [
+        { "id": "free-night", "labelKey": "reward.freeNight", "grantsKind": "freeNightCertificate", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "goh-40",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [40] },
+      "choose": false,
+      "options": [
+        { "id": "guest-of-honor", "labelKey": "reward.guestOfHonor", "giftable": true, "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "choice-40",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [40] },
+      "choose": true,
+      "options": [
+        { "id": "suite-upgrade", "labelKey": "reward.suiteUpgradeAward", "grantsKind": "suiteNightUpgrade", "grantsQuantity": 1 },
+        { "id": "bonus-points", "labelKey": "reward.bonusPoints", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "find-credit", "labelKey": "reward.findCredit", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "airline-partner", "labelKey": "reward.partnerAirlineBenefit", "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "choice-50",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [50] },
+      "choose": true,
+      "options": [
+        { "id": "suite-upgrade", "labelKey": "reward.suiteUpgradeAward", "grantsKind": "suiteNightUpgrade", "grantsQuantity": 2 },
+        { "id": "bonus-points", "labelKey": "reward.bonusPoints", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "find-credit", "labelKey": "reward.findCredit", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "airline-partner", "labelKey": "reward.partnerAirlineBenefit", "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "suite-60",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [60] },
+      "choose": false,
+      "options": [
+        { "id": "suite-upgrade", "labelKey": "reward.suiteUpgradeAward", "grantsKind": "suiteNightUpgrade", "grantsQuantity": 2 }
+      ]
+    },
+    {
+      "id": "goh-60",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [60] },
+      "choose": false,
+      "options": [
+        { "id": "guest-of-honor", "labelKey": "reward.guestOfHonor", "giftable": true, "grantsKind": "other", "grantsQuantity": 2 }
+      ]
+    },
+    {
+      "id": "free-night-60",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [60] },
+      "choose": false,
+      "options": [
+        { "id": "free-night", "labelKey": "reward.freeNight", "grantsKind": "freeNightCertificate", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "goh-70-90",
+      "metricId": "nights",
+      "trigger": { "type": "interval", "start": 70, "step": 10, "end": 90 },
+      "choose": false,
+      "options": [
+        { "id": "guest-of-honor", "labelKey": "reward.guestOfHonor", "giftable": true, "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "choice-70-90",
+      "metricId": "nights",
+      "trigger": { "type": "interval", "start": 70, "step": 10, "end": 90 },
+      "choose": true,
+      "options": [
+        { "id": "suite-upgrade", "labelKey": "reward.suiteUpgradeAward", "grantsKind": "suiteNightUpgrade", "grantsQuantity": 1 },
+        { "id": "bonus-points", "labelKey": "reward.bonusPoints", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "find-credit", "labelKey": "reward.findCredit", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "airline-partner", "labelKey": "reward.partnerAirlineBenefit", "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "free-night-100",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [100] },
+      "choose": false,
+      "options": [
+        { "id": "free-night", "labelKey": "reward.freeNight", "grantsKind": "freeNightCertificate", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "goh-110-140",
+      "metricId": "nights",
+      "trigger": { "type": "interval", "start": 110, "step": 10, "end": 140 },
+      "choose": false,
+      "options": [
+        { "id": "guest-of-honor", "labelKey": "reward.guestOfHonor", "giftable": true, "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "free-night-150",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [150] },
+      "choose": false,
+      "options": [
+        { "id": "ultimate-free-night", "labelKey": "reward.ultimateFreeNight", "grantsKind": "freeNightCertificate", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "choice-100-150",
+      "metricId": "nights",
+      "trigger": { "type": "interval", "start": 100, "step": 10, "end": 150 },
+      "choose": true,
+      "options": [
+        { "id": "suite-upgrade", "labelKey": "reward.suiteUpgradeAward", "grantsKind": "suiteNightUpgrade", "grantsQuantity": 1 },
+        { "id": "bonus-points", "labelKey": "reward.bonusPoints", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "miraval-night", "labelKey": "reward.miravalNight", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "airline-partner", "labelKey": "reward.partnerAirlineBenefit", "grantsKind": "other", "grantsQuantity": 1 }
+      ]
+    }
+  ]
+}

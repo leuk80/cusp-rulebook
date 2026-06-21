@@ -1,0 +1,7 @@
+{
+  "programId": "radisson-rewards",
+  "hotel": {
+    "nightsMetricId": "nights",
+    "staysMetricId": "stays"
+  }
+}

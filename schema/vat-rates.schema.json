@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/cusp/cusp-rulebook/schema/vat-rates.schema.json",
+  "title": "Lodging VAT Rates",
+  "description": "Country (ISO 3166-1 alpha-2) → lodging VAT rate, used to net hotel spend when a bill doesn't break out the tax. Decoded as [String: Double]. File convention: `vat-rates.json`.",
+  "type": "object",
+  "propertyNames": { "pattern": "^[A-Z]{2}$" },
+  "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+}

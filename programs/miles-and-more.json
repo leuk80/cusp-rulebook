@@ -1,0 +1,47 @@
+{
+  "id": "miles-and-more",
+  "name": "Miles & More",
+  "type": "airline",
+  "redeemableCurrency": "Prämienmeilen",
+  "alliance": "star",
+  "metrics": [
+    { "id": "points", "name": "Points",            "unit": "P",  "periodType": "calendarYear", "purchasedCap": 120 },
+    { "id": "qp",     "name": "Qualifying Points",  "unit": "QP", "periodType": "calendarYear" },
+    { "id": "honp",   "name": "HON Circle Points",  "unit": "HP", "periodType": "calendarYear" }
+  ],
+  "tiers": [
+    {
+      "id": "ft", "name": "Frequent Traveller", "rank": 1, "mode": "allOf",
+      "allianceStatus": "silver",
+      "thresholds": [
+        { "metricId": "points", "value": 650 },
+        { "metricId": "qp",     "value": 325 }
+      ]
+    },
+    {
+      "id": "sen", "name": "Senator", "rank": 2, "mode": "allOf",
+      "allianceStatus": "gold",
+      "thresholds": [
+        { "metricId": "points", "value": 2000 },
+        { "metricId": "qp",     "value": 1000 }
+      ]
+    },
+    {
+      "id": "hon", "name": "HON Circle", "rank": 3, "mode": "anyOf",
+      "allianceStatus": "gold",
+      "thresholds": [
+        { "metricId": "honp", "value": 6000 }
+      ]
+    }
+  ],
+  "lifetimeTiers": [
+    {
+      "id": "lt-ft", "name": "Lifetime Frequent Traveller", "rank": 1, "mode": "anyOf",
+      "thresholds": [ { "metricId": "qp", "value": 30000 } ]
+    },
+    {
+      "id": "lt-sen", "name": "Lifetime Senator", "rank": 2, "mode": "anyOf",
+      "thresholds": [ { "metricId": "qp", "value": 40000 } ]
+    }
+  ]
+}

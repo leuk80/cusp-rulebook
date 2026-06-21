@@ -1,0 +1,39 @@
+{
+  "id": "accor-all",
+  "name": "Accor Live Limitless",
+  "type": "hotel",
+  "redeemableCurrency": "Reward Points",
+  "metrics": [
+    { "id": "sp",     "name": "Status Points", "unit": "SP",     "periodType": "calendarYear" },
+    { "id": "nights", "name": "Status Nights", "unit": "Nights", "periodType": "calendarYear", "purchasedCap": 30 }
+  ],
+  "tiers": [
+    {
+      "id": "silver", "name": "Silver", "rank": 1, "mode": "anyOf",
+      "thresholds": [
+        { "metricId": "sp",     "value": 2000 },
+        { "metricId": "nights", "value": 10 }
+      ]
+    },
+    {
+      "id": "gold", "name": "Gold", "rank": 2, "mode": "anyOf",
+      "thresholds": [
+        { "metricId": "sp",     "value": 7000 },
+        { "metricId": "nights", "value": 30 }
+      ]
+    },
+    {
+      "id": "platinum", "name": "Platinum", "rank": 3, "mode": "anyOf",
+      "thresholds": [
+        { "metricId": "sp",     "value": 14000 },
+        { "metricId": "nights", "value": 60 }
+      ]
+    },
+    {
+      "id": "diamond", "name": "Diamond", "rank": 4, "mode": "anyOf",
+      "thresholds": [
+        { "metricId": "sp", "value": 26000 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "programId": "aeroplan",
+  "purchase": {
+    "pointsMetricId": "sqc",
+    "pointsPerEuro": 2.0,
+    "convertToEUR": false,
+    "roundPointsDown": true
+  }
+}

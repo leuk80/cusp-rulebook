@@ -1,0 +1,22 @@
+{
+  "id": "delta-skymiles",
+  "name": "Delta SkyMiles",
+  "type": "airline",
+  "alliance": "skyteam",
+  "redeemableCurrency": "SkyMiles",
+  "metrics": [
+    { "id": "mqd", "name": "Medallion Qualification Dollars", "unit": "$", "periodType": "calendarYear" }
+  ],
+  "tiers": [
+    { "id": "member", "name": "Member", "rank": 0, "mode": "anyOf",
+      "thresholds": [ { "metricId": "mqd", "value": 0 } ] },
+    { "id": "silver", "name": "Silver Medallion", "rank": 1, "mode": "anyOf",
+      "thresholds": [ { "metricId": "mqd", "value": 5000 } ] },
+    { "id": "gold", "name": "Gold Medallion", "rank": 2, "mode": "anyOf",
+      "thresholds": [ { "metricId": "mqd", "value": 10000 } ] },
+    { "id": "platinum", "name": "Platinum Medallion", "rank": 3, "mode": "anyOf",
+      "thresholds": [ { "metricId": "mqd", "value": 15000 } ] },
+    { "id": "diamond", "name": "Diamond Medallion", "rank": 4, "mode": "anyOf",
+      "thresholds": [ { "metricId": "mqd", "value": 28000 } ] }
+  ]
+}

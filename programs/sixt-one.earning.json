@@ -1,0 +1,9 @@
+{
+  "programId": "sixt-one",
+  "purchase": {
+    "pointsMetricId": "statuspoints",
+    "pointsPerEuro": 1.0,
+    "convertToEUR": true,
+    "roundPointsDown": true
+  }
+}

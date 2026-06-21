@@ -1,0 +1,10 @@
+{
+  "programId": "flying-blue",
+  "flight": {
+    "pointsMetricId": "xp",
+    "pointMatrix": {
+      "continental":      { "economy": 5, "premiumEconomy": 7,  "business": 9,  "first": 12 },
+      "intercontinental": { "economy": 8, "premiumEconomy": 14, "business": 20, "first": 28 }
+    }
+  }
+}

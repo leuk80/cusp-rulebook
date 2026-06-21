@@ -1,0 +1,9 @@
+{
+  "programId": "marriott-bonvoy",
+  "hotel": {
+    "pointsMetricId": "spend",
+    "nightsMetricId": "nights",
+    "pointsPerEuro": 1.0,
+    "roundPointsDown": false
+  }
+}

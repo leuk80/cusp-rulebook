@@ -1,0 +1,10 @@
+{
+  "programId": "hilton-honors",
+  "hotel": {
+    "pointsMetricId": "spend",
+    "pointsPerEuro": 1,
+    "roundPointsDown": false,
+    "nightsMetricId": "nights",
+    "staysMetricId": "stays"
+  }
+}

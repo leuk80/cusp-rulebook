@@ -1,0 +1,9 @@
+{
+  "programId": "accor-all",
+  "hotel": {
+    "pointsMetricId": "sp",
+    "nightsMetricId": "nights",
+    "pointsPerEuro": 2.5,
+    "roundPointsDown": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "radisson-rewards",
+  "name": "Radisson Rewards",
+  "type": "hotel",
+  "redeemableCurrency": "Points",
+  "metrics": [
+    { "id": "nights", "name": "Eligible Nights", "unit": "Nights", "periodType": "anchoredReset" },
+    { "id": "stays",  "name": "Eligible Stays",  "unit": "Stays",  "periodType": "anchoredReset" }
+  ],
+  "tiers": [
+    {
+      "id": "club", "name": "Club", "rank": 1, "mode": "anyOf",
+      "thresholds": [ { "metricId": "nights", "value": 0 } ]
+    },
+    {
+      "id": "premium", "name": "Premium", "rank": 2, "mode": "anyOf",
+      "thresholds": [ { "metricId": "nights", "value": 5 }, { "metricId": "stays", "value": 3 } ]
+    },
+    {
+      "id": "vip", "name": "VIP", "rank": 3, "mode": "anyOf",
+      "thresholds": [ { "metricId": "nights", "value": 30 }, { "metricId": "stays", "value": 20 } ]
+    }
+  ]
+}

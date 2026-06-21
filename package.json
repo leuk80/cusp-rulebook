@@ -1,0 +1,15 @@
+{
+  "name": "cusp-rulebook",
+  "version": "1.0.0",
+  "description": "Public, community-reviewable rulebook of airline & hotel loyalty programs consumed by the Cusp app.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

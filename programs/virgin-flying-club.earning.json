@@ -1,0 +1,10 @@
+{
+  "programId": "virgin-flying-club",
+  "flight": {
+    "pointsMetricId": "tierpoints",
+    "pointMatrix": {
+      "continental":      { "economy": 50, "premiumEconomy": 100, "business": 200, "first": 200 },
+      "intercontinental": { "economy": 50, "premiumEconomy": 100, "business": 200, "first": 200 }
+    }
+  }
+}

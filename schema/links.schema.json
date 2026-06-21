@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/cusp/cusp-rulebook/schema/links.schema.json",
+  "title": "Program Links",
+  "description": "Directed cross-program crediting (point conversions, elite-night credits, status matches). Mirrors `[ProgramLink]` in QualificationEngine/ProgramLink.swift. File convention: `*.links.json` (root is an array).",
+  "type": "array",
+  "items": { "$ref": "#/$defs/link" },
+  "$defs": {
+    "earningSource": {
+      "enum": ["stay", "flight", "purchase", "purchasedNights", "statusCard", "promotion", "statusMatch", "partner", "manualAdjustment"]
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "fromProgramId", "toProgramId", "type", "toMetricId", "source"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "fromProgramId": { "type": "string", "minLength": 1 },
+        "toProgramId": { "type": "string", "minLength": 1 },
+        "type": { "enum": ["pointConversion", "eliteNightCredit", "statusBenefit"] },
+        "toMetricId": { "type": "string", "description": "Destination metric the credit lands on. Empty for statusBenefit." },
+        "source": { "$ref": "#/$defs/earningSource" },
+
+        "pointsPerStay": { "type": "number", "minimum": 0, "description": "Credit per qualifying stay." },
+        "minNights": { "type": "integer", "minimum": 0, "description": "Minimum nights for a stay to qualify." },
+        "perNights": { "type": "integer", "exclusiveMinimum": 0, "description": "If set, credit per N-night block instead of flat per stay." },
+        "perNight": { "type": "number", "minimum": 0, "description": "eliteNightCredit: nights credited per stay-night (default 1)." },
+        "requiresPaidStay": { "type": "boolean", "description": "Whether the stay must be paid to qualify (default true)." },
+
+        "requiresTierIds": { "type": "array", "items": { "type": "string", "minLength": 1 }, "description": "statusBenefit: source tier ids that grant the benefit." },
+        "grantsTierId": { "type": "string", "minLength": 1, "description": "statusBenefit: destination tier id the match grants (display-only)." }
+      }
+    }
+  }
+}

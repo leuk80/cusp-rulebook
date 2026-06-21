@@ -1,0 +1,14 @@
+{
+  "programId": "miles-and-more",
+  "flight": {
+    "pointsMetricId": "points",
+    "qpMetricId": "qp",
+    "honMetricId": "honp",
+    "pointMatrix": {
+      "continental":      { "economy": 20, "premiumEconomy": 20, "business": 40,  "first": 40 },
+      "intercontinental": { "economy": 60, "premiumEconomy": 80, "business": 200, "first": 400 }
+    },
+    "qpIntegratedAirlines": ["LH", "LX", "OS", "SN", "OU", "EN", "4Y", "EW", "AZ", "LO", "LG"],
+    "honCabins": ["business", "first"]
+  }
+}

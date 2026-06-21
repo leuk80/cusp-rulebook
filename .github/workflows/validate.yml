@@ -1,0 +1,27 @@
+name: Validate rulebook
+
+# Structural gate for contributor PRs: every program config is validated against its
+# JSON Schema. Cross-reference integrity (do referenced metric/tier ids resolve?) is
+# enforced by the Swift CatalogIntegrityTests in the consuming app.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    # Paths are relative to this directory once the rulebook is its own repo. While it
+    # still lives under rulebook/ in the app repo, set the working directory accordingly.
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate configs against schema
+        run: npm run validate

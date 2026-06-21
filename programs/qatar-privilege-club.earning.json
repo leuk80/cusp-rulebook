@@ -1,0 +1,10 @@
+{
+  "programId": "qatar-privilege-club",
+  "flight": {
+    "pointsMetricId": "qpoints",
+    "pointMatrix": {
+      "continental":      { "economy": 2, "premiumEconomy": 4,  "business": 6,  "first": 8 },
+      "intercontinental": { "economy": 8, "premiumEconomy": 16, "business": 30, "first": 45 }
+    }
+  }
+}

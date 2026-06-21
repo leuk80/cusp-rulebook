@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/cusp/cusp-rulebook/schema/program.schema.json",
+  "title": "Loyalty Program Config",
+  "description": "A loyalty program's status metrics and tiers. Mirrors `Program` in QualificationEngine/Model.swift. File convention: `<id>.json`.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "type", "redeemableCurrency", "metrics", "tiers"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "type": { "enum": ["airline", "hotel", "alliance", "rail", "car"] },
+    "redeemableCurrency": { "type": "string", "minLength": 1 },
+    "alliance": { "enum": ["star", "oneworld", "skyteam"] },
+    "metrics": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/metric" }
+    },
+    "tiers": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/tier" }
+    },
+    "lifetimeMetrics": {
+      "description": "Lifetime-only metrics (e.g. Elite Years) not earned from bookings.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/metric" }
+    },
+    "lifetimeTiers": {
+      "description": "Cumulative, never-resetting tiers (e.g. Marriott Lifetime Platinum).",
+      "type": "array",
+      "items": { "$ref": "#/$defs/tier" }
+    }
+  },
+  "$defs": {
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "unit", "periodType"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "unit": { "type": "string" },
+        "periodType": { "enum": ["calendarYear", "rolling12", "membershipYear", "anchoredReset"] },
+        "anchorDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO-8601 date-time; only month/day matter (used for membershipYear windows)."
+        },
+        "purchasedCap": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Yearly ceiling on non-organic (purchased/promo/partner) contributions."
+        }
+      }
+    },
+    "tier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "rank"],
+      "description": "A flat tier uses mode + thresholds; a nested tier uses groups (CNF: all groups must hold, each group is anyOf). Exactly one of the two forms must be present.",
+      "oneOf": [
+        { "required": ["thresholds"], "not": { "required": ["groups"] } },
+        { "required": ["groups"], "not": { "required": ["thresholds"] } }
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "rank": { "type": "integer" },
+        "mode": { "enum": ["anyOf", "allOf"] },
+        "allianceStatus": { "type": "string" },
+        "thresholds": { "$ref": "#/$defs/thresholdList" },
+        "groups": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["anyOf"],
+            "properties": {
+              "anyOf": { "$ref": "#/$defs/thresholdList" }
+            }
+          }
+        }
+      }
+    },
+    "thresholdList": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["metricId", "value"],
+        "properties": {
+          "metricId": { "type": "string", "minLength": 1 },
+          "value": { "type": "number" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "programId": "ihg-one-rewards",
+  "milestones": [
+    {
+      "id": "milestone-rewards",
+      "metricId": "nights",
+      "trigger": { "type": "interval", "start": 20, "step": 10, "end": 100 },
+      "choose": true,
+      "options": [
+        { "id": "bonus-points", "labelKey": "reward.bonusPoints", "grantsKind": "other", "grantsQuantity": 1 },
+        { "id": "free-night", "labelKey": "reward.freeNight", "grantsKind": "freeNightCertificate", "grantsQuantity": 1 }
+      ]
+    },
+    {
+      "id": "annual-lounge",
+      "metricId": "nights",
+      "trigger": { "type": "thresholds", "values": [40] },
+      "choose": false,
+      "options": [
+        { "id": "lounge", "labelKey": "reward.annualLoungePass", "grantsKind": "loungePass", "grantsQuantity": 1 }
+      ]
+    }
+  ]
+}

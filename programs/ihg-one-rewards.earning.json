@@ -1,0 +1,9 @@
+{
+  "programId": "ihg-one-rewards",
+  "hotel": {
+    "pointsMetricId": "points",
+    "pointsPerEuro": 10,
+    "roundPointsDown": true,
+    "nightsMetricId": "nights"
+  }
+}
