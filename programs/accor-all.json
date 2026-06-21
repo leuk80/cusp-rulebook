@@ -4,36 +4,102 @@
   "type": "hotel",
   "redeemableCurrency": "Reward Points",
   "metrics": [
-    { "id": "sp",     "name": "Status Points", "unit": "SP",     "periodType": "calendarYear" },
-    { "id": "nights", "name": "Status Nights", "unit": "Nights", "periodType": "calendarYear", "purchasedCap": 30 }
+    {
+      "id": "sp",
+      "name": "Status Points",
+      "unit": "SP",
+      "periodType": "calendarYear"
+    },
+    {
+      "id": "nights",
+      "name": "Status Nights",
+      "unit": "Nights",
+      "periodType": "calendarYear",
+      "purchasedCap": 30
+    }
   ],
   "tiers": [
     {
-      "id": "silver", "name": "Silver", "rank": 1, "mode": "anyOf",
+      "id": "silver",
+      "name": "Silver",
+      "rank": 1,
+      "mode": "anyOf",
       "thresholds": [
-        { "metricId": "sp",     "value": 2000 },
-        { "metricId": "nights", "value": 10 }
+        {
+          "metricId": "sp",
+          "value": 2000
+        },
+        {
+          "metricId": "nights",
+          "value": 10
+        }
       ]
     },
     {
-      "id": "gold", "name": "Gold", "rank": 2, "mode": "anyOf",
+      "id": "gold",
+      "name": "Gold",
+      "rank": 2,
+      "mode": "anyOf",
       "thresholds": [
-        { "metricId": "sp",     "value": 7000 },
-        { "metricId": "nights", "value": 30 }
+        {
+          "metricId": "sp",
+          "value": 7000
+        },
+        {
+          "metricId": "nights",
+          "value": 30
+        }
       ]
     },
     {
-      "id": "platinum", "name": "Platinum", "rank": 3, "mode": "anyOf",
+      "id": "platinum",
+      "name": "Platinum",
+      "rank": 3,
+      "mode": "anyOf",
       "thresholds": [
-        { "metricId": "sp",     "value": 14000 },
-        { "metricId": "nights", "value": 60 }
+        {
+          "metricId": "sp",
+          "value": 14000
+        },
+        {
+          "metricId": "nights",
+          "value": 60
+        }
       ]
     },
     {
-      "id": "diamond", "name": "Diamond", "rank": 4, "mode": "anyOf",
+      "id": "diamond",
+      "name": "Diamond",
+      "rank": 4,
+      "mode": "anyOf",
       "thresholds": [
-        { "metricId": "sp", "value": 26000 }
+        {
+          "metricId": "sp",
+          "value": 26000
+        }
       ]
     }
+  ],
+  "brands": [
+    "Sofitel",
+    "MGallery",
+    "Pullman",
+    "Novotel",
+    "Grand Mercure",
+    "Mercure",
+    "ibis Styles",
+    "ibis budget",
+    "ibis",
+    "Raffles",
+    "Fairmont",
+    "Swissôtel",
+    "Mövenpick",
+    "Mama Shelter",
+    "Adagio",
+    "Banyan Tree",
+    "Orient Express",
+    "25hours",
+    "TRIBE",
+    "Handwritten"
   ]
 }

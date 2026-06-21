@@ -160,5 +160,27 @@
         }
       ]
     }
+  ],
+  "brands": [
+    "Waldorf Astoria",
+    "Conrad",
+    "LXR",
+    "Signia",
+    "NoMad",
+    "Graduate",
+    "Canopy",
+    "Curio",
+    "Tapestry",
+    "Tempo",
+    "Motto",
+    "Hilton Garden Inn",
+    "Hilton",
+    "DoubleTree",
+    "Embassy Suites",
+    "Homewood Suites",
+    "Home2 Suites",
+    "Hampton",
+    "Tru",
+    "Spark"
   ]
 }

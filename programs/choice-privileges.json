@@ -1,11 +1,90 @@
 {
-  "id": "choice-privileges", "name": "Choice Privileges", "type": "hotel", "redeemableCurrency": "points",
-  "metrics": [ { "id": "nights", "name": "Nights", "unit": "nights", "periodType": "calendarYear" } ],
+  "id": "choice-privileges",
+  "name": "Choice Privileges",
+  "type": "hotel",
+  "redeemableCurrency": "points",
+  "metrics": [
+    {
+      "id": "nights",
+      "name": "Nights",
+      "unit": "nights",
+      "periodType": "calendarYear"
+    }
+  ],
   "tiers": [
-    { "id": "member",   "name": "Member",   "rank": 0, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 0 } ] },
-    { "id": "gold",     "name": "Gold",     "rank": 1, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 5 } ] },
-    { "id": "platinum", "name": "Platinum", "rank": 2, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 15 } ] },
-    { "id": "diamond",  "name": "Diamond",  "rank": 3, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 35 } ] },
-    { "id": "titanium", "name": "Titanium", "rank": 4, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 55 } ] }
+    {
+      "id": "member",
+      "name": "Member",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 35
+        }
+      ]
+    },
+    {
+      "id": "titanium",
+      "name": "Titanium",
+      "rank": 4,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 55
+        }
+      ]
+    }
+  ],
+  "brands": [
+    "Comfort",
+    "Quality Inn",
+    "Sleep Inn",
+    "Clarion",
+    "Econo Lodge",
+    "Rodeway Inn",
+    "MainStay Suites",
+    "Cambria",
+    "Ascend",
+    "Suburban Studios",
+    "WoodSpring Suites",
+    "Everhome Suites"
   ]
 }

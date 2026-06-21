@@ -1,11 +1,89 @@
 {
-  "id": "best-western-rewards", "name": "Best Western Rewards", "type": "hotel", "redeemableCurrency": "points",
-  "metrics": [ { "id": "nights", "name": "Qualifying Nights", "unit": "nights", "periodType": "calendarYear" } ],
+  "id": "best-western-rewards",
+  "name": "Best Western Rewards",
+  "type": "hotel",
+  "redeemableCurrency": "points",
+  "metrics": [
+    {
+      "id": "nights",
+      "name": "Qualifying Nights",
+      "unit": "nights",
+      "periodType": "calendarYear"
+    }
+  ],
   "tiers": [
-    { "id": "blue",           "name": "Blue",           "rank": 0, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 0 } ] },
-    { "id": "gold",           "name": "Gold",           "rank": 1, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 5 } ] },
-    { "id": "platinum",       "name": "Platinum",       "rank": 2, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 7 } ] },
-    { "id": "diamond",        "name": "Diamond",        "rank": 3, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 15 } ] },
-    { "id": "diamond-select", "name": "Diamond Select", "rank": 4, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 25 } ] }
+    {
+      "id": "blue",
+      "name": "Blue",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "id": "diamond-select",
+      "name": "Diamond Select",
+      "rank": 4,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "nights",
+          "value": 25
+        }
+      ]
+    }
+  ],
+  "brands": [
+    "Best Western Premier",
+    "Best Western Plus",
+    "Best Western",
+    "SureStay Plus",
+    "SureStay",
+    "Aiden",
+    "Sadie",
+    "GLo",
+    "Vib",
+    "Executive Residency",
+    "WorldHotels"
   ]
 }
