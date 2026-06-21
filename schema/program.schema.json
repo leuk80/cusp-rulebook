@@ -88,6 +88,14 @@
         "type": "string",
         "minLength": 1
       }
+    },
+    "providers": {
+      "description": "Merchant/provider tokens for spend programs (substring-matched to route imported purchases).",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     }
   },
   "$defs": {
