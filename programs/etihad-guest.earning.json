@@ -1,0 +1,10 @@
+{
+  "programId": "etihad-guest",
+  "flight": {
+    "pointsMetricId": "tiermiles",
+    "pointMatrix": {
+      "continental":      { "economy": 1000, "premiumEconomy": 1250, "business": 1500, "first": 2000 },
+      "intercontinental": { "economy": 3500, "premiumEconomy": 4375, "business": 5250, "first": 7000 }
+    }
+  }
+}

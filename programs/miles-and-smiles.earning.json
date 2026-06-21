@@ -1,0 +1,10 @@
+{
+  "programId": "miles-and-smiles",
+  "flight": {
+    "pointsMetricId": "statusmiles",
+    "pointMatrix": {
+      "continental":      { "economy": 1500, "premiumEconomy": 1875, "business": 2250, "first": 3000 },
+      "intercontinental": { "economy": 5000, "premiumEconomy": 6250, "business": 7500, "first": 10000 }
+    }
+  }
+}
