@@ -4,16 +4,64 @@
   "type": "car",
   "redeemableCurrency": "Rental Points",
   "metrics": [
-    { "id": "statuspoints", "name": "Status Points", "unit": "SP", "periodType": "calendarYear" }
+    {
+      "id": "statuspoints",
+      "name": "Status Points",
+      "unit": "SP",
+      "periodType": "calendarYear"
+    }
   ],
   "tiers": [
-    { "id": "silver", "name": "Silver", "rank": 0, "mode": "anyOf",
-      "thresholds": [ { "metricId": "statuspoints", "value": 0 } ] },
-    { "id": "gold", "name": "Gold", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "statuspoints", "value": 2000 } ] },
-    { "id": "platinum", "name": "Platinum", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "statuspoints", "value": 4000 } ] },
-    { "id": "diamond", "name": "Diamond", "rank": 3, "mode": "anyOf",
-      "thresholds": [ { "metricId": "statuspoints", "value": 6000 } ] }
+    {
+      "id": "silver",
+      "name": "Silver",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statuspoints",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statuspoints",
+          "value": 2000
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statuspoints",
+          "value": 4000
+        }
+      ]
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statuspoints",
+          "value": 6000
+        }
+      ]
+    }
+  ],
+  "providers": [
+    "Sixt"
   ]
 }

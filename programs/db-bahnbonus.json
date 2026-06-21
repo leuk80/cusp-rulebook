@@ -4,14 +4,56 @@
   "type": "rail",
   "redeemableCurrency": "Prämienpunkte",
   "metrics": [
-    { "id": "statuspoints", "name": "Status Points", "unit": "SP", "periodType": "rolling12" }
+    {
+      "id": "statuspoints",
+      "name": "Status Points",
+      "unit": "SP",
+      "periodType": "rolling12"
+    }
   ],
   "tiers": [
-    { "id": "silber", "name": "Silber", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "statuspoints", "value": 1500 } ] },
-    { "id": "gold", "name": "Gold", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "statuspoints", "value": 2500 } ] },
-    { "id": "platin", "name": "Platin", "rank": 3, "mode": "anyOf",
-      "thresholds": [ { "metricId": "statuspoints", "value": 6000 } ] }
+    {
+      "id": "silber",
+      "name": "Silber",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statuspoints",
+          "value": 1500
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statuspoints",
+          "value": 2500
+        }
+      ]
+    },
+    {
+      "id": "platin",
+      "name": "Platin",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statuspoints",
+          "value": 6000
+        }
+      ]
+    }
+  ],
+  "providers": [
+    "Deutsche Bahn",
+    "DB Fernverkehr",
+    "DB Vertrieb",
+    "bahn.de",
+    "Bahn"
   ]
 }
