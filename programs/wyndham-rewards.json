@@ -1,0 +1,10 @@
+{
+  "id": "wyndham-rewards", "name": "Wyndham Rewards", "type": "hotel", "redeemableCurrency": "Points",
+  "metrics": [ { "id": "nights", "name": "Nights", "unit": "Nights", "periodType": "calendarYear" } ],
+  "tiers": [
+    { "id": "blue",     "name": "Blue",     "rank": 0, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 0 } ] },
+    { "id": "gold",     "name": "Gold",     "rank": 1, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 5 } ] },
+    { "id": "platinum", "name": "Platinum", "rank": 2, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 15 } ] },
+    { "id": "diamond",  "name": "Diamond",  "rank": 3, "mode": "anyOf", "thresholds": [ { "metricId": "nights", "value": 40 } ] }
+  ]
+}
