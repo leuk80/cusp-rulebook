@@ -80,7 +80,7 @@ A tier uses **either** `mode`+`thresholds` **or** `groups` — never both.
 | `pointsMetricId`  |     | Status-points metric, if any (omit for nights-only programs). |
 | `nightsMetricId`  |     | Nights metric, if counted. |
 | `staysMetricId`   |     | Stays metric (1 per stay regardless of nights). |
-| `pointsPerEuro`   |     | Points per **eligible (net-of-tax)** euro. |
+| `pointsPerEuro`   |     | Points per **eligible** euro — net of tax **and** service charge. |
 | `roundPointsDown` |     | Floor vs nearest. Default `true`. |
 
 ### `purchase`
@@ -91,8 +91,12 @@ A tier uses **either** `mode`+`thresholds` **or** `groups` — never both.
 | `convertToEUR`    |     | Default `true`. Set `false` for currency-denominated points (e.g. BA Tier Points: 1 TP per £). |
 | `roundPointsDown` |     | Floor vs nearest. Default `true`. |
 
-> Hotel points are earned on spend **excluding taxes**; the engine nets VAT (from
-> `vat-rates.json` or a broken-out tax amount) before applying `pointsPerEuro`.
+> Hotel points are earned on the **pre-tax, pre-service room rate** (Accor's *prix HT*; the
+> same holds for the other hotel programs). Before applying `pointsPerEuro` the engine nets
+> the gross down: an explicit broken-out tax amount wins, otherwise it removes the country
+> VAT (`vat-rates.json`) **and** the country service charge (`service-rates.json`), i.e.
+> `eligible = gross / (1 + service) / (1 + vat)`. Both are global, country-keyed tables — the
+> deduction is **not** a per-program field.
 
 ---
 
@@ -147,3 +151,12 @@ Root is an **array** of directed cross-program links.
 
 A flat object mapping ISO 3166-1 alpha-2 country code → lodging VAT rate (`0`–`1`). Used to
 estimate net eligible spend when a hotel bill doesn't break out the tax.
+
+## Service-charge rates — `service-rates.json`
+
+A flat object mapping ISO 3166-1 alpha-2 country code → lodging **service-charge** ("++")
+rate (`0`–`1`), e.g. `{ "TH": 0.10 }`. Removed on top of VAT for programs that earn only on
+the pure room rate (`eligible = gross / (1 + service) / (1 + vat)`). Applied only when the
+bill has no broken-out tax amount; an explicit tax amount always wins. Heuristic — not every
+rate carries a service charge — so include a country **only** where it's standard/mandatory
+for hotels; otherwise leave it out and rely on the per-booking tax override.
