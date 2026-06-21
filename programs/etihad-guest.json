@@ -4,16 +4,64 @@
   "type": "airline",
   "redeemableCurrency": "Etihad Guest miles",
   "metrics": [
-    { "id": "tiermiles", "name": "Tier Miles", "unit": "TM", "periodType": "rolling12" }
+    {
+      "id": "tiermiles",
+      "name": "Tier Miles",
+      "unit": "TM",
+      "periodType": "rolling12"
+    }
   ],
   "tiers": [
-    { "id": "bronze", "name": "Bronze", "rank": 0, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tiermiles", "value": 0 } ] },
-    { "id": "silver", "name": "Silver", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tiermiles", "value": 25000 } ] },
-    { "id": "gold", "name": "Gold", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tiermiles", "value": 50000 } ] },
-    { "id": "platinum", "name": "Platinum", "rank": 3, "mode": "anyOf",
-      "thresholds": [ { "metricId": "tiermiles", "value": 125000 } ] }
+    {
+      "id": "bronze",
+      "name": "Bronze",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tiermiles",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tiermiles",
+          "value": 25000
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tiermiles",
+          "value": 50000
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "tiermiles",
+          "value": 125000
+        }
+      ]
+    }
+  ],
+  "carriers": [
+    "EY"
   ]
 }

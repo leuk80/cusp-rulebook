@@ -5,19 +5,77 @@
   "alliance": "oneworld",
   "redeemableCurrency": "AAdvantage miles",
   "metrics": [
-    { "id": "loyaltypoints", "name": "Loyalty Points", "unit": "LP",
-      "periodType": "membershipYear", "anchorDate": "2001-03-01T00:00:00Z" }
+    {
+      "id": "loyaltypoints",
+      "name": "Loyalty Points",
+      "unit": "LP",
+      "periodType": "membershipYear",
+      "anchorDate": "2001-03-01T00:00:00Z"
+    }
   ],
   "tiers": [
-    { "id": "member", "name": "Member", "rank": 0, "mode": "anyOf",
-      "thresholds": [ { "metricId": "loyaltypoints", "value": 0 } ] },
-    { "id": "gold", "name": "Gold", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "loyaltypoints", "value": 40000 } ] },
-    { "id": "platinum", "name": "Platinum", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "loyaltypoints", "value": 75000 } ] },
-    { "id": "platinumpro", "name": "Platinum Pro", "rank": 3, "mode": "anyOf",
-      "thresholds": [ { "metricId": "loyaltypoints", "value": 125000 } ] },
-    { "id": "execplatinum", "name": "Executive Platinum", "rank": 4, "mode": "anyOf",
-      "thresholds": [ { "metricId": "loyaltypoints", "value": 200000 } ] }
+    {
+      "id": "member",
+      "name": "Member",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "loyaltypoints",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "loyaltypoints",
+          "value": 40000
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "loyaltypoints",
+          "value": 75000
+        }
+      ]
+    },
+    {
+      "id": "platinumpro",
+      "name": "Platinum Pro",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "loyaltypoints",
+          "value": 125000
+        }
+      ]
+    },
+    {
+      "id": "execplatinum",
+      "name": "Executive Platinum",
+      "rank": 4,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "loyaltypoints",
+          "value": 200000
+        }
+      ]
+    }
+  ],
+  "carriers": [
+    "AA"
   ]
 }

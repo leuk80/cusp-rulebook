@@ -5,17 +5,77 @@
   "alliance": "star",
   "redeemableCurrency": "Miles",
   "metrics": [
-    { "id": "statusmiles", "name": "Status Miles", "unit": "Status Miles", "periodType": "rolling12" },
-    { "id": "statusflights", "name": "Status Flights", "unit": "flights", "periodType": "rolling12" }
+    {
+      "id": "statusmiles",
+      "name": "Status Miles",
+      "unit": "Status Miles",
+      "periodType": "rolling12"
+    },
+    {
+      "id": "statusflights",
+      "name": "Status Flights",
+      "unit": "flights",
+      "periodType": "rolling12"
+    }
   ],
   "tiers": [
-    { "id": "classic", "name": "Classic", "rank": 0, "mode": "anyOf",
-      "thresholds": [ { "metricId": "statusmiles", "value": 0 } ] },
-    { "id": "classicplus", "name": "Classic Plus", "rank": 1, "mode": "anyOf", "allianceStatus": "silver",
-      "thresholds": [ { "metricId": "statusmiles", "value": 25000 }, { "metricId": "statusflights", "value": 40 } ] },
-    { "id": "elite", "name": "Elite", "rank": 2, "mode": "anyOf", "allianceStatus": "gold",
-      "thresholds": [ { "metricId": "statusmiles", "value": 40000 } ] },
-    { "id": "eliteplus", "name": "Elite Plus", "rank": 3, "mode": "anyOf", "allianceStatus": "gold",
-      "thresholds": [ { "metricId": "statusmiles", "value": 80000 } ] }
+    {
+      "id": "classic",
+      "name": "Classic",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statusmiles",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "classicplus",
+      "name": "Classic Plus",
+      "rank": 1,
+      "mode": "anyOf",
+      "allianceStatus": "silver",
+      "thresholds": [
+        {
+          "metricId": "statusmiles",
+          "value": 25000
+        },
+        {
+          "metricId": "statusflights",
+          "value": 40
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "Elite",
+      "rank": 2,
+      "mode": "anyOf",
+      "allianceStatus": "gold",
+      "thresholds": [
+        {
+          "metricId": "statusmiles",
+          "value": 40000
+        }
+      ]
+    },
+    {
+      "id": "eliteplus",
+      "name": "Elite Plus",
+      "rank": 3,
+      "mode": "anyOf",
+      "allianceStatus": "gold",
+      "thresholds": [
+        {
+          "metricId": "statusmiles",
+          "value": 80000
+        }
+      ]
+    }
+  ],
+  "carriers": [
+    "TK"
   ]
 }

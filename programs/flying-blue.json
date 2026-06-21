@@ -5,16 +5,65 @@
   "alliance": "skyteam",
   "redeemableCurrency": "Miles",
   "metrics": [
-    { "id": "xp", "name": "Experience Points", "unit": "XP", "periodType": "rolling12" }
+    {
+      "id": "xp",
+      "name": "Experience Points",
+      "unit": "XP",
+      "periodType": "rolling12"
+    }
   ],
   "tiers": [
-    { "id": "explorer", "name": "Explorer", "rank": 0, "mode": "anyOf",
-      "thresholds": [ { "metricId": "xp", "value": 0 } ] },
-    { "id": "silver", "name": "Silver", "rank": 1, "mode": "anyOf",
-      "thresholds": [ { "metricId": "xp", "value": 100 } ] },
-    { "id": "gold", "name": "Gold", "rank": 2, "mode": "anyOf",
-      "thresholds": [ { "metricId": "xp", "value": 180 } ] },
-    { "id": "platinum", "name": "Platinum", "rank": 3, "mode": "anyOf",
-      "thresholds": [ { "metricId": "xp", "value": 300 } ] }
+    {
+      "id": "explorer",
+      "name": "Explorer",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "xp",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "xp",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "xp",
+          "value": 180
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "xp",
+          "value": 300
+        }
+      ]
+    }
+  ],
+  "carriers": [
+    "AF",
+    "KL"
   ]
 }

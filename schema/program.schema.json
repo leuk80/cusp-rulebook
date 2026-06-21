@@ -80,6 +80,14 @@
         "type": "string",
         "minLength": 1
       }
+    },
+    "carriers": {
+      "description": "Operating-carrier IATA codes on this program's own metal (exact-matched to route imported flights).",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     }
   },
   "$defs": {
