@@ -1,0 +1,71 @@
+{
+  "id": "eva-infinity",
+  "name": "Infinity MileageLands",
+  "type": "airline",
+  "alliance": "star",
+  "redeemableCurrency": "EVA miles",
+  "metrics": [
+    {
+      "id": "statusmiles",
+      "name": "Status miles",
+      "unit": "Status miles",
+      "periodType": "rolling24"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "green",
+      "name": "Green",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statusmiles",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statusmiles",
+          "value": 30000
+        }
+      ],
+      "allianceStatus": "silver"
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statusmiles",
+          "value": 50000
+        }
+      ],
+      "allianceStatus": "gold"
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "statusmiles",
+          "value": 120000
+        }
+      ],
+      "allianceStatus": "gold"
+    }
+  ],
+  "carriers": [
+    "BR"
+  ]
+}

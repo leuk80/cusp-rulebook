@@ -124,6 +124,7 @@
           "enum": [
             "calendarYear",
             "rolling12",
+            "rolling24",
             "membershipYear",
             "anchoredReset"
           ]

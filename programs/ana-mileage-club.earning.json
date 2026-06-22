@@ -1,0 +1,20 @@
+{
+  "programId": "ana-mileage-club",
+  "flight": {
+    "pointsMetricId": "pp",
+    "pointMatrix": {
+      "continental": {
+        "economy": 800,
+        "premiumEconomy": 1200,
+        "business": 2000,
+        "first": 2400
+      },
+      "intercontinental": {
+        "economy": 5000,
+        "premiumEconomy": 8000,
+        "business": 12000,
+        "first": 15000
+      }
+    }
+  }
+}

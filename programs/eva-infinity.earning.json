@@ -1,0 +1,20 @@
+{
+  "programId": "eva-infinity",
+  "flight": {
+    "pointsMetricId": "statusmiles",
+    "pointMatrix": {
+      "continental": {
+        "economy": 750,
+        "premiumEconomy": 1000,
+        "business": 1600,
+        "first": 2000
+      },
+      "intercontinental": {
+        "economy": 5000,
+        "premiumEconomy": 7000,
+        "business": 10000,
+        "first": 12000
+      }
+    }
+  }
+}
