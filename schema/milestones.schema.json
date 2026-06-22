@@ -5,37 +5,83 @@
   "description": "Config-driven rewards unlocked at metric thresholds above/alongside status (Extra Benefits, Suite Night Upgrades, Milestone Rewards). Mirrors `MilestoneSet`/`Milestone` in QualificationEngine/Milestone.swift. File convention: `<id>.milestones.json`.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["programId", "milestones"],
+  "required": [
+    "programId",
+    "milestones"
+  ],
   "properties": {
-    "$schema": { "type": "string" },
-    "programId": { "type": "string", "minLength": 1 },
+    "$schema": {
+      "type": "string"
+    },
+    "programId": {
+      "type": "string",
+      "minLength": 1
+    },
     "milestones": {
       "type": "array",
-      "items": { "$ref": "#/$defs/milestone" }
+      "items": {
+        "$ref": "#/$defs/milestone"
+      }
     }
   },
   "$defs": {
     "earningSource": {
-      "enum": ["stay", "flight", "purchase", "purchasedNights", "statusCard", "promotion", "statusMatch", "partner", "manualAdjustment"]
+      "enum": [
+        "stay",
+        "flight",
+        "purchase",
+        "purchasedNights",
+        "statusCard",
+        "promotion",
+        "statusMatch",
+        "partner",
+        "manualAdjustment"
+      ]
     },
     "milestone": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "metricId", "trigger", "choose", "options"],
+      "required": [
+        "id",
+        "metricId",
+        "trigger",
+        "choose",
+        "options"
+      ],
       "properties": {
-        "id": { "type": "string", "minLength": 1 },
-        "metricId": { "type": "string", "minLength": 1, "description": "Which metric standing drives this milestone." },
-        "trigger": { "$ref": "#/$defs/trigger" },
-        "requiredTierId": { "type": "string", "minLength": 1, "description": "Only active while this exact tier is held." },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metricId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Which metric standing drives this milestone."
+        },
+        "trigger": {
+          "$ref": "#/$defs/trigger"
+        },
+        "requiredTierId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Only active while this exact tier is held."
+        },
         "eligibleSources": {
           "type": "array",
-          "items": { "$ref": "#/$defs/earningSource" }
+          "items": {
+            "$ref": "#/$defs/earningSource"
+          }
         },
-        "choose": { "type": "boolean", "description": "true = choose 1 of options; false = all auto-granted." },
+        "choose": {
+          "type": "boolean",
+          "description": "true = choose 1 of options; false = all auto-granted."
+        },
         "options": {
           "type": "array",
           "minItems": 1,
-          "items": { "$ref": "#/$defs/reward" }
+          "items": {
+            "$ref": "#/$defs/reward"
+          }
         }
       }
     },
@@ -44,20 +90,45 @@
       "oneOf": [
         {
           "additionalProperties": false,
-          "required": ["type", "values"],
+          "required": [
+            "type",
+            "values"
+          ],
           "properties": {
-            "type": { "const": "thresholds" },
-            "values": { "type": "array", "minItems": 1, "items": { "type": "number" } }
+            "type": {
+              "const": "thresholds"
+            },
+            "values": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "number"
+              }
+            }
           }
         },
         {
           "additionalProperties": false,
-          "required": ["type", "start", "step", "end"],
+          "required": [
+            "type",
+            "start",
+            "step",
+            "end"
+          ],
           "properties": {
-            "type": { "const": "interval" },
-            "start": { "type": "number" },
-            "step": { "type": "number", "exclusiveMinimum": 0 },
-            "end": { "type": "number" }
+            "type": {
+              "const": "interval"
+            },
+            "start": {
+              "type": "number"
+            },
+            "step": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "end": {
+              "type": "number"
+            }
           }
         }
       ]
@@ -65,13 +136,50 @@
     "reward": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "labelKey"],
+      "required": [
+        "id",
+        "labelKey"
+      ],
       "properties": {
-        "id": { "type": "string", "minLength": 1 },
-        "labelKey": { "type": "string", "minLength": 1, "description": "Localized in the app." },
-        "giftable": { "type": "boolean" },
-        "grantsKind": { "enum": ["suiteNightUpgrade", "freeNightCertificate", "upgradeVoucher", "loungePass", "other"] },
-        "grantsQuantity": { "type": "integer", "minimum": 0 }
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "labelKey": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Localized in the app."
+        },
+        "giftable": {
+          "type": "boolean"
+        },
+        "grantsKind": {
+          "enum": [
+            "suiteNightUpgrade",
+            "freeNightCertificate",
+            "upgradeVoucher",
+            "loungePass",
+            "other"
+          ]
+        },
+        "grantsQuantity": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "expiry": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "endOfYearsAhead"
+          ],
+          "description": "Declarative expiry for the granted benefit: lapses at the end of (issue year + endOfYearsAhead).",
+          "properties": {
+            "endOfYearsAhead": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
       }
     }
   }
