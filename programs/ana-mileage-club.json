@@ -1,0 +1,71 @@
+{
+  "id": "ana-mileage-club",
+  "name": "ANA Mileage Club",
+  "type": "airline",
+  "alliance": "star",
+  "redeemableCurrency": "ANA miles",
+  "metrics": [
+    {
+      "id": "pp",
+      "name": "Premium Points",
+      "unit": "PP",
+      "periodType": "calendarYear"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "member",
+      "name": "ANA Mileage Club",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "pp",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "bronze",
+      "name": "Bronze",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "pp",
+          "value": 30000
+        }
+      ],
+      "allianceStatus": "silver"
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "pp",
+          "value": 50000
+        }
+      ],
+      "allianceStatus": "gold"
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "rank": 3,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "pp",
+          "value": 100000
+        }
+      ],
+      "allianceStatus": "gold"
+    }
+  ],
+  "carriers": [
+    "NH"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "thai-rop",
+  "name": "Royal Orchid Plus",
+  "type": "airline",
+  "alliance": "star",
+  "redeemableCurrency": "ROP miles",
+  "metrics": [
+    {
+      "id": "qm",
+      "name": "Qualifying Miles",
+      "unit": "QM",
+      "periodType": "rolling12"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "member",
+      "name": "Royal Orchid Plus",
+      "rank": 0,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "qm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "rank": 1,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "qm",
+          "value": 10000
+        }
+      ],
+      "allianceStatus": "silver"
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "rank": 2,
+      "mode": "anyOf",
+      "thresholds": [
+        {
+          "metricId": "qm",
+          "value": 50000
+        }
+      ],
+      "allianceStatus": "gold"
+    }
+  ],
+  "carriers": [
+    "TG"
+  ]
+}
